@@ -100,7 +100,7 @@ No installation. No account. No signup. Just open and use.
 
 ```bash
 # Clone the repository
-git clone https://github.com/treegex/pot.git
+git clone https://github.com/aliazmoodehvaldi/pot.git
 cd pot
 
 # Install dependencies
@@ -461,7 +461,7 @@ Contributions are welcome! Here's how to help:
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/YOUR_USERNAME/pot.git
+git clone https://github.com/aliazmoodehvaldi/pot.git
 cd pot
 
 # Install dependencies
