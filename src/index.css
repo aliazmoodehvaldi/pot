@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-blue-600: #2563eb;
+  --color-blue-500: #3b82f6;
+}
+
+@utility mask-fade-right {
+  mask-image: linear-gradient(
+    to right,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+}
+
+@utility scrollbar-none {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 antialiased font-sans transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50;
+  }
+
+  .fa-text {
+    font-family: 'Vazirmatn', sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/IRANSans.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/IRANSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'IRANSans', sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
